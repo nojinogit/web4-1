@@ -39,9 +39,7 @@
                         @endif
                         @unless (Auth::check())
                         <li class="header-nav__item default">
-                            <form class="form" action="/" method="get">
-                                <button class="header-nav__button">ログイン</button>
-                            </form>
+                            <a class="header-nav__link header-utilities-a" href="/">ログイン</a>
                         </li>
                         @if (!Auth::check())
                         <li class="header-nav__item default">

@@ -10,7 +10,4 @@ class TopController extends Controller
     return view('/top');
     }
 
-    public function areaSearch($area){
-    return view('/');
-    }
 }

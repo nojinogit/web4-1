@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,5 @@ use App\Http\Controllers\TopController;
 Route::get('/', function () {return view('login');});
 
 Route::get('/top',[TopController::class,'top'])->name('top');
-Route::get('/areaSearch/{area}',[TopController::class,'areaSearch'])->name('areaSearch');
+Route::get('/search',[SearchController::class,'search'])->name('search');
+Route::get('/areaSearch/{area}',[SearchController::class,'areaSearch'])->name('areaSearch');

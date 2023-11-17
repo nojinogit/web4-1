@@ -5,7 +5,7 @@
     position: relative;
 }
 
-img {
+.search-img {
     width: 100%;
     height: 500px;
 }
@@ -95,3 +95,27 @@ img {
     color: black;
 }
 
+.commit-wrap{
+    margin: 0 auto;
+    max-width: 1000px;
+    background-color: white;
+}
+
+.commit-area{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.commit-img-area{
+    width:20%;
+}
+
+.commit-img{
+    width: 100%;
+}
+
+.commit-p{
+    font-weight: bold;
+}
