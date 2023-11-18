@@ -55,7 +55,7 @@
             <img src="{{asset('storage/shop/yakiniku.jpg')}}" alt="" class="shop-img">
         </div>
         <div class="shop-main-area">
-            <h3>焼肉三昧</h3>
+            <a href="{{route('detail')}}"><h3>焼肉三昧</h3></a>
             <p class="result-rating-rate">
                 <span class="star5_rating" data-rate="3.5"></span>
                 <span class="number_rating">3.5</span>
