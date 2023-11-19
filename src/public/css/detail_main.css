@@ -1,4 +1,3 @@
-
 .search {
     margin: 50px auto;
     text-align: center;
@@ -73,21 +72,32 @@
 
 .condition-box{
     width: 33%;
+    height: 50px;
+}
+
+.condition-box-a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
 }
 
 #top{
     background-color: gray;
     border-right: 1px solid gray;
-    font-weight: bold;
 }
 
-#ranking {
+#photo {
     border-right: 1px solid gray;
-    font-weight: bold;
+    width: 34%;
 }
 
 #comment{
-    font-weight: bold;
+
 }
 
 .title-wrap {
@@ -111,7 +121,6 @@
     max-width: 800px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
 }
 
 .main-left{
@@ -135,14 +144,181 @@
     width: 100%;
 }
 
+.overview-area {
+    background-color: rgb(229, 229, 229);
+    min-height: 50px;
+}
 
+.overview-area-p {
+    padding: 5px 0 0 5px;
+}
 
+.basic_information-area{
+    max-width: 800px;
+    margin: 30px auto 0 auto;
+    padding-bottom: 30px;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
 
+.h3{
+    border-left: 2px solid gray;
+    padding-left: 20px;
+}
 
+.basic_information-area table{
+    width:100%;
+    border-collapse: collapse;
+}
 
+.basic_information-area th {
+    width: 30%;
+    background-color: rgb(229, 229, 229);
+    padding: 5px;
+}
 
+.basic_information-area td {
+    width: 70%;
+    padding-left: 50px;
+}
 
+.basic_information-area tr {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+}
 
+.photo-area {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+    border-bottom: 2px solid gray;
+}
+
+.photo-img-area {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.photo-img{
+    width: 19%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.comment-area{
+    max-width: 800px;
+    margin: 30px auto;
+}
+
+.comment-title-area{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.comment-button{
+    color: white;
+    background-color: black;
+    height: 20px;
+    width: 100px;
+    border: none;
+    border-radius: 3px;
+    cursor:pointer;
+}
+
+.comment-user-area {
+    display: flex;
+    align-items: center;
+}
+
+.user-img{
+    width: 50px;
+}
+
+.comment-main-area{
+    width: 100%;
+    border: 1px solid gray;
+    border-radius: 3px;
+    display: flex;
+    padding: 10px;
+}
+
+.comment-left{
+    width: 70%;
+}
+
+.comment-right{
+    width: 30%;
+    padding-top: 30px;
+}
+
+.comment-img{
+    width: 100%;
+}
+
+.comment-title{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.main-right {
+    width: 28%;
+}
+
+.reserve-title{
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 14px;
+    background-color: black;
+    text-align: center;
+}
+
+.reserve-title-p {
+    color: white;
+}
+
+#datepicker{
+    margin-top: -20px;
+    margin-left: -10px;
+    margin-bottom: -40px;
+}
+
+.reserve-input-area{
+    margin-left: 14px;
+    width: 100%;
+}
+
+.input-row{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    margin-bottom: 5px;
+}
+
+.number::after {
+    content: "名";
+}
+
+input[type="number"],
+input[type="time"] {
+    width: 200px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.reserve-button{
+    width: 100%;
+    margin-top: 20px;
+    background-color: black;
+    border: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
 
 
 

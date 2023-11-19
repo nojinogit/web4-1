@@ -7,8 +7,14 @@
     <title>@yield('title')</title>
     <link rel="stylesheet" href="{{asset('css/sanitize.css')}}"/>
     <link rel="stylesheet" href="{{asset('css/layouts.css')}}"/>
+    <link rel="stylesheet" href="{{asset('css/datepicker.css')}}"/>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdn.rawgit.com/osamutake/japanese-holidays-js/v1.0.10/lib/japanese-holidays.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
     @yield('css')
-    
+
 
 </head>
 <body>

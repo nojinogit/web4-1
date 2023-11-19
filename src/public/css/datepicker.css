@@ -1,0 +1,21 @@
+.ui-datepicker {
+    transform: scale(0.83);
+}
+
+.maru div::after {
+    display: flex;
+    justify-content: center;
+    content: "〇";
+}
+
+.batu div::after {
+    display: flex;
+    justify-content: center;
+    content: "×";
+}
+
+.hyphen div::after {
+    display: flex;
+    justify-content: center;
+    content: "-";
+}
