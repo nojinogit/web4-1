@@ -10,11 +10,11 @@ class DetailController extends Controller
     return view('/detail_main');
     }
 
-    public function detail_photo(Request $request){
+    public function detailPhoto(Request $request){
     return view('/detail_photo');
     }
 
-    public function detail_comment(Request $request){
+    public function detailComment(Request $request){
     return view('/detail_comment');
     }
 }

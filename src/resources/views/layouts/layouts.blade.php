@@ -37,7 +37,8 @@
                         <li class="header-nav__item default">
                             <a class="header-nav__link header-utilities-a" href="/myPage">マイページ</a>
                         </li>
-                        @if(Auth::user()->role > 99)
+                        {{--@if(Auth::user()->role > 99)--}}
+                        @if (Auth::check())
                         <li class="header-nav__item default">
                             <a class="header-nav__link header-utilities-a" href="/management">管理画面</a>
                         </li>

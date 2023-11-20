@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\TopController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\DetailController;
+use App\Http\Controllers\ManagementController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,7 @@ Route::get('/top',[TopController::class,'top'])->name('top');
 Route::get('/search',[SearchController::class,'search'])->name('search');
 Route::get('/areaSearch/{area}',[SearchController::class,'areaSearch'])->name('areaSearch');
 Route::get('/detail',[DetailController::class,'detail'])->name('detail');
-Route::get('/detail_photo',[DetailController::class,'detail_photo'])->name('detail_photo');
-Route::get('/detail_comment',[DetailController::class,'detail_comment'])->name('detail_comment');
+Route::get('/detail_photo',[DetailController::class,'detailPhoto'])->name('detail_photo');
+Route::get('/detail_comment',[DetailController::class,'detailComment'])->name('detail_comment');
+Route::get('/management',[ManagementController::class,'management'])->name('management');
+Route::get('/management_shop_create',[ManagementController::class,'managementShopCreate'])->name('management_shop_create');
