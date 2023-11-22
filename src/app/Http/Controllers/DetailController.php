@@ -7,14 +7,14 @@ use Illuminate\Http\Request;
 class DetailController extends Controller
 {
     public function detail(Request $request){
-    return view('/detail_main');
+    return view('/detail/main');
     }
 
     public function detailPhoto(Request $request){
-    return view('/detail_photo');
+    return view('/detail/photo');
     }
 
     public function detailComment(Request $request){
-    return view('/detail_comment');
+    return view('/detail/comment');
     }
 }

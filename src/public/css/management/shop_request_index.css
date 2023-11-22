@@ -1,0 +1,70 @@
+.shop_request_index-wrap {
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.title-area {
+    width: 100%;
+    margin: 50px 0;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.button-area{
+    width: 100%;
+    margin: 50px 0;
+    border-bottom: 1px solid gray;
+}
+
+.button{
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    color: gray;
+    font-weight: bold;
+}
+
+.button:hover {
+    color: black;
+    border-bottom: 2px solid black;
+}
+
+.second{
+    border-left: 1px solid lightgray;
+    border-right: 1px solid lightgray;
+    margin-left:-6px;
+}
+
+.information-area {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.information-top {
+    background-color: gainsboro;
+}
+
+.information-top h4 {
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+tr:nth-child(2n+1) {
+    background-color: gainsboro;
+}

@@ -1,0 +1,66 @@
+.shop_create-wrap {
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.title-area {
+    width: 100%;
+    margin: 50px 0;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.information-area {
+    width: 100%;
+    margin: 50px 0;
+}
+
+.information-top {
+    background-color: gainsboro;
+}
+
+.information-top h4 {
+    padding: 5px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    width: 30%;
+    background-color: gainsboro;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+td {
+    width: 70%;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+input {
+    width: 100%;
+}
+
+label{
+    margin-left: 20px;
+}
+
+.two-input input{
+    width: 35%;
+    margin-left: 5px;
+}
+
+.button-area{
+    margin-top: 50px;
+    width: 100%;
+    text-align: right;
+}
+
+.button{
+    width: 100px;
+    font-weight: bold;
+}

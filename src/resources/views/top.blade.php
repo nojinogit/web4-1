@@ -1,4 +1,4 @@
-@extends('layouts.layouts')
+@extends('layouts.header_layouts')
 
 @section('title','top')
 

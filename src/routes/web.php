@@ -26,4 +26,7 @@ Route::get('/detail',[DetailController::class,'detail'])->name('detail');
 Route::get('/detail_photo',[DetailController::class,'detailPhoto'])->name('detail_photo');
 Route::get('/detail_comment',[DetailController::class,'detailComment'])->name('detail_comment');
 Route::get('/management',[ManagementController::class,'management'])->name('management');
+Route::get('/management_shop_index',[ManagementController::class,'managementShopIndex'])->name('management_shop_index');
+Route::get('/management_shop_request_index',[ManagementController::class,'managementShopRequestIndex'])->name('management_shop_request_index');
 Route::get('/management_shop_create',[ManagementController::class,'managementShopCreate'])->name('management_shop_create');
+Route::get('/management_shop_update',[ManagementController::class,'managementShopUpdate'])->name('management_shop_update');
