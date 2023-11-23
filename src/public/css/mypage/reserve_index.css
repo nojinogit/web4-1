@@ -1,0 +1,87 @@
+.reserve_index-wrap {
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.title-area {
+    width: 100%;
+    margin: 50px 0;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.shop-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.shop-area {
+    width: 100%;
+    border: 1px solid lightgray;
+}
+
+.condition-area{
+    border-bottom: 1px solid lightgray;
+}
+
+.condition-p{
+    margin-left:20px;
+    width: 100px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.reserve-main-area{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.reserve_data-area{
+    margin: 20px;
+}
+
+.img-area {
+    width: 20%;
+}
+
+.shop-img {
+    width: 100%;
+    height: 150px;
+}
+
+.data{
+    margin-top: 10px;
+}
+
+.datalabel{
+    margin-right: 20px;
+    background-color: linen;
+    padding-right: 5px;
+    padding-left: 5px;
+    font-weight: bold;
+}
+
+.button-area {
+    margin-left: 50px;
+}
+
+.button-area-box {
+    width: 100%;
+    margin: 20px;
+    background-color: gainsboro;
+    box-shadow: 2px 2px 2px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.button-a {
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+}

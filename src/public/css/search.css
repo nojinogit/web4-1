@@ -102,6 +102,21 @@
     justify-content: space-between;
 }
 
+.shop-main-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.store_management{
+    text-decoration: none;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 2px 20px;
+}
+
 .shop-img-area{
     width: 20%;
 }
@@ -116,6 +131,8 @@
     margin-top: -20px;
     width: 70%;
 }
+
+
 
 .shop-budget-area{
     display: flex;

@@ -1,0 +1,89 @@
+.myPage-wrap {
+    max-width: 800px;
+    margin: 100px auto;
+}
+
+.profile-area {
+    width: 100%;
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+}
+
+.img-area{
+    width: 30%;
+}
+
+.profile-img{
+    width: 100%;
+    border-radius: 5px;
+}
+
+.button-area{
+    margin-left: 20px;
+}
+
+.img-button {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    width: 30%;
+    background-color: gainsboro;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 5px;
+}
+
+td {
+    width: 70%;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    padding: 10px;
+}
+
+input {
+    width: 50%;
+}
+
+
+.radio {
+    width: 5%;
+}
+
+
+label{
+    margin-left: -10px;
+}
+
+.select{
+    margin-right: 5px;
+}
+
+.margin-left{
+    margin-left: 10px;
+}
+
+.submit-button-area {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.button {
+    width: 100px;
+    font-weight: bold;
+    border: none;
+    box-shadow: 2px 2px 2px;
+    cursor: pointer;
+}
