@@ -1,0 +1,126 @@
+.page-wrap{
+    display: flex;
+}
+
+.sidebar-wrap {
+    position: fixed;
+    left: 0;
+    width: 15%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    color: white;
+    margin-top: -40px;
+}
+
+.edit-area {
+    margin: 30px;
+}
+
+.reserve-area {
+    margin: 30px;
+}
+
+.sidebar-wrap a {
+    color: white;
+    text-decoration: none;
+}
+
+.edit-area div {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.reserve-area div {
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.edit-main{
+    max-width: 800px;
+    margin-left:20%;
+}
+
+
+
+
+.update-wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.title-area{
+    width: 100%;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.img-area,
+.information-area,
+.commitment-area{
+    width: 100%;
+    margin: 30px auto;
+    border: 1px dashed black;
+    padding: 5px;
+}
+
+.title{
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.img-box{
+    width: 50%;
+    margin: 0 auto;
+}
+
+.img-box img {
+    width: 100%;
+    margin: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    border: 1px solid black;
+    padding: 5px;
+    background-color: gainsboro;
+    width: 25%;
+}
+
+td {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+table input{
+    width: 100%;
+}
+
+table select {
+    width: 100%;
+}
+
+table textarea {
+    width: 100%;
+}
+
+.button-area{
+    text-align: right;
+}
+
+.button{
+    cursor: pointer;
+    background-color: gainsboro;
+    border: none;
+    box-shadow:2px 2px 2px;
+    font-weight: bold;
+    padding: 5px;
+    width: 150px;
+}

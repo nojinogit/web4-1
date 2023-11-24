@@ -38,7 +38,7 @@
     <div class="overview-area">
         <p class="overview-area-p">このお店は最高の焼肉三昧！</p>
     </div>
-    <div class="update-button-area"><a href="" class="update-button">修正する</a></div>
+    <div class="update-button-area"><a href="{{route('shop_basic_update')}}" class="update-button">修正する</a></div>
     <div class="basic_information-area">
         <h3 class="h3">店舗基本情報</h3>
         <table>
