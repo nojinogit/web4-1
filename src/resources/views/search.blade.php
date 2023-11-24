@@ -57,7 +57,7 @@
         <div class="shop-main-area">
             <div class="shop-main-head">
                 <a href="{{route('detail')}}"><h3>焼肉三昧</h3></a>
-                <a href="{{route('store_management')}}" class="store_management">店舗管理ページへ</a>
+                <a href="{{route('shop_management')}}" class="store_management">店舗管理ページへ</a>
             </div>
             <p class="result-rating-rate">
                 <span class="star5_rating" data-rate="3.5"></span>

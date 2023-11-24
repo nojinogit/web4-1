@@ -18,7 +18,7 @@
         </div>
         <div class="reserve-area">
             <p>ネット予約管理</p>
-            <div><a href="">予約カレンダー</a></div>
+            <div><a href="{{route('reserve_calender')}}">予約カレンダー</a></div>
             <div><a href="">本日の予約</a></div>
         </div>
     </div>

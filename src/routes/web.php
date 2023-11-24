@@ -5,7 +5,7 @@ use App\Http\Controllers\TopController;
 use App\Http\Controllers\SearchController;
 use App\Http\Controllers\DetailController;
 use App\Http\Controllers\ManagementController;
-use App\Http\Controllers\StoreManagementController;
+use App\Http\Controllers\ShopManagementController;
 use App\Http\Controllers\MyPageController;
 
 /*
@@ -40,4 +40,6 @@ Route::get('/profile',[MyPageController::class,'profile'])->name('profile');
 Route::get('/reserve_index',[MyPageController::class,'reserveIndex'])->name('reserve_index');
 Route::get('/reserve_confirm',[MyPageController::class,'reserveConfirm'])->name('reserve_confirm');
 
-Route::get('/store_management',[StoreManagementController::class,'storeManagement'])->name('store_management');
+Route::get('/shop_management',[ShopManagementController::class,'shopManagement'])->name('shop_management');
+Route::get('/reserve_calender',[ShopManagementController::class,'reserveCalender'])->name('reserve_calender');
+Route::get('/reserve_detail',[ShopManagementController::class,'reserveDetail'])->name('reserve_detail');
