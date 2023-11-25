@@ -42,5 +42,7 @@ Route::get('/reserve_confirm',[MyPageController::class,'reserveConfirm'])->name(
 
 Route::get('/shop_management',[ShopManagementController::class,'shopManagement'])->name('shop_management');
 Route::get('/shop_basic_update',[ShopManagementController::class,'shopBasicUpdate'])->name('shop_basic_update');
+Route::get('/shop_important_update',[ShopManagementController::class,'shopImportantUpdate'])->name('shop_important_update');
+Route::get('/shop_important_request',[ShopManagementController::class,'shopImportantRequest'])->name('shop_important_request');
 Route::get('/reserve_calender',[ShopManagementController::class,'reserveCalender'])->name('reserve_calender');
 Route::get('/reserve_detail',[ShopManagementController::class,'reserveDetail'])->name('reserve_detail');

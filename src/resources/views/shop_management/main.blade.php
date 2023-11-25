@@ -67,7 +67,7 @@
                 <td>昼￥1,000～￥2,000　夜￥1,000～￥2,000</td>
             </tr>
         </table>
-        <div class="update-button-area"><a href="" class="update-button">修正する</a></div>
+        <div class="update-button-area"><a href="{{route('shop_important_update')}}" class="update-button">修正する</a></div>
     </div>
     <div class="photo-area">
         <h3 class="h3">公式写真</h3>

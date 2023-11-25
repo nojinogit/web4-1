@@ -14,6 +14,14 @@ class ShopManagementController extends Controller
     return view('/shop_management/shop_basic_update');
     }
 
+    public function shopImportantUpdate(Request $request){
+    return view('/shop_management/shop_important_update');
+    }
+
+    public function shopImportantRequest(Request $request){
+    return view('/shop_management/shop_important_request');
+    }
+
     public function reserveCalender(Request $request){
     return view('/shop_management/reserve_calendar');
     }

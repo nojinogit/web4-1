@@ -13,13 +13,13 @@
     <div class="sidebar-wrap">
         <div class="edit-area">
             <p>店舗ページ編集</p>
-            <div><a href="">店舗トップ</a></div>
-            <div><a href="">店舗重要情報</a></div>
+            <div><a href="{{route('shop_management')}}">店舗トップ</a></div>
+            <div><a href="{{route('shop_important_update')}}">店舗重要情報</a></div>
         </div>
         <div class="reserve-area">
             <p>ネット予約管理</p>
             <div><a href="{{route('reserve_calender')}}">予約カレンダー</a></div>
-            <div><a href="">本日の予約</a></div>
+            <div><a href="{{route('reserve_calender')}}">本日の予約</a></div>
         </div>
     </div>
     <div class="edit-main">
