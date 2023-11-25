@@ -52,7 +52,7 @@
         </table>
     </div>
     <div class="a-area">
-            <a class="a" href="">予約変更</あ>
+            <a class="a" href="{{route('reserve_update')}}">予約変更</a>
             <a class="a" href="">予約をキャンセルする</a>
     </div>
 </div>

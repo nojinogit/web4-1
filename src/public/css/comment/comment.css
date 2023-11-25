@@ -1,0 +1,175 @@
+
+.comment-wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.title-area{
+    width: 100%;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+p {
+    font-weight: bold;
+}
+
+#session {
+    color: blue;
+}
+
+.error {
+    list-style: none;
+    color: red;
+}
+
+#inputlength {
+    text-align: right;
+    font-weight: normal;
+}
+
+.upload-box {
+    width: 100%;
+    background-color: white;
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+    cursor: pointer;
+    position: relative;
+}
+
+.preview-box {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 150px;
+    object-fit: cover;
+}
+
+img {
+    width: 100%;
+}
+
+.box-message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.upload-box span {
+    text-align: center;
+}
+
+.submit {
+    width: 50%;
+    margin: 30px auto;
+    border: none;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: gainsboro;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.rate-form {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rate-form input[type=radio] {
+    display: none;
+}
+
+.rate-form label {
+    position: relative;
+    padding: 0 5px;
+    color: #ccc;
+    cursor: pointer;
+    font-size: 35px;
+}
+
+.rate-form label:hover {
+    color: blue;
+}
+
+.rate-form label:hover~label {
+    color: blue;
+}
+
+.rate-form input[type=radio]:checked~label {
+    color: blue;
+}
+
+.star5_rating {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC;
+    /* グレーカラー 自由に設定化 */
+    /*font-size: 30px; フォントサイズ 自由に設定化 */
+}
+
+.star5_rating:before,
+.star5_rating:after {
+    content: '★★★★★';
+}
+
+.star5_rating:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    color: blue;
+    /* イエローカラー 自由に設定化 */
+}
+
+.star5_rating {
+    position: relative;
+    z-index: 0;
+    display: inline-block;
+    white-space: nowrap;
+    color: #CCCCCC;
+}
+
+.star5_rating:before,
+.star5_rating:after {
+    content: '★★★★★';
+}
+
+.star5_rating[data-rate="5"]:after {
+    width: 100%;
+}
+
+.star5_rating[data-rate="4"]:after {
+    width: 80%;
+}
+
+.star5_rating[data-rate="3"]:after {
+    width: 60%;
+}
+
+.star5_rating[data-rate="2"]:after {
+    width: 40%;
+}
+
+.star5_rating[data-rate="1"]:after {
+    width: 20%;
+}
+
+.star5_rating[data-rate="0"]:after {
+    width: 0%;
+}

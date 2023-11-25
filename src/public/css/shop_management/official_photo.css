@@ -1,0 +1,76 @@
+.photo-wrap {
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.title-area {
+    width: 100%;
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+p {
+    font-weight: bold;
+}
+
+#session {
+    color: blue;
+}
+
+.error {
+    list-style: none;
+    color: red;
+}
+
+.upload-box {
+    width: 100%;
+    background-color: white;
+    height: 150px;
+    border: 1px solid gray;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 80px;
+    cursor: pointer;
+    position: relative;
+}
+
+.preview-box {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    width: 150px;
+    object-fit: cover;
+}
+
+img {
+    width:100%;
+}
+
+.box-message {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.upload-box span {
+    text-align: center;
+}
+
+.submit {
+    width: 50%;
+    margin: 30px auto;
+    border: none;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: gainsboro;
+    color: black;
+    border: none;
+    border-radius: 50px;
+    height: 40px;
+    width: 100%;
+    cursor: pointer;
+}

@@ -26,7 +26,7 @@
         <div class="comment-area">
             <div class="comment-title-area">
                 <h3 class="h3">口コミ</h3>
-                <button class="comment-button">投稿する</button>
+                <form action="{{route('comment')}}"><button class="comment-button">投稿する</button></form>
             </div>
             <div class="comment-box">
                 <div class="comment-user-area">

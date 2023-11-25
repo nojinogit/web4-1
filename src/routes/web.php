@@ -7,6 +7,7 @@ use App\Http\Controllers\DetailController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\ShopManagementController;
 use App\Http\Controllers\MyPageController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,6 +40,7 @@ Route::get('/myPage',[MyPageController::class,'myPage'])->name('myPage');
 Route::get('/profile',[MyPageController::class,'profile'])->name('profile');
 Route::get('/reserve_index',[MyPageController::class,'reserveIndex'])->name('reserve_index');
 Route::get('/reserve_confirm',[MyPageController::class,'reserveConfirm'])->name('reserve_confirm');
+Route::get('/reserve_update',[MyPageController::class,'reserveUpdate'])->name('reserve_update');
 
 Route::get('/shop_management',[ShopManagementController::class,'shopManagement'])->name('shop_management');
 Route::get('/shop_basic_update',[ShopManagementController::class,'shopBasicUpdate'])->name('shop_basic_update');
@@ -46,3 +48,6 @@ Route::get('/shop_important_update',[ShopManagementController::class,'shopImport
 Route::get('/shop_important_request',[ShopManagementController::class,'shopImportantRequest'])->name('shop_important_request');
 Route::get('/reserve_calender',[ShopManagementController::class,'reserveCalender'])->name('reserve_calender');
 Route::get('/reserve_detail',[ShopManagementController::class,'reserveDetail'])->name('reserve_detail');
+Route::get('/official_photo',[ShopManagementController::class,'officialPhoto'])->name('official_photo');
+
+Route::get('/comment',[CommentController::class,'comment'])->name('comment');

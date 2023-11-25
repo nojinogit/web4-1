@@ -21,4 +21,8 @@ class MyPageController extends Controller
     public function reserveConfirm(Request $request){
     return view('/mypage/reserve_confirm');
     }
+
+    public function reserveUpdate(Request $request){
+    return view('/mypage/reserve_update');
+    }
 }

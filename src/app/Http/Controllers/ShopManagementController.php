@@ -29,4 +29,8 @@ class ShopManagementController extends Controller
     public function reserveDetail(Request $request){
     return view('/shop_management/reserve_detail');
     }
+
+    public function officialPhoto(Request $request){
+    return view('/shop_management/official_photo');
+    }
 }

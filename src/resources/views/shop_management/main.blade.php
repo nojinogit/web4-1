@@ -71,7 +71,7 @@
     </div>
     <div class="photo-area">
         <h3 class="h3">公式写真</h3>
-        <a href="" class="update-button">投稿する</a>
+        <a href="{{route('official_photo')}}" class="update-button">投稿する</a>
         <div class="photo-img-area">
             <img src="{{asset('storage/shop/yakiniku.jpg')}}" alt="" class="photo-img">
             <img src="{{asset('storage/shop/yakiniku.jpg')}}" alt="" class="photo-img">
