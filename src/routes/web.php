@@ -35,6 +35,7 @@ Route::get('/management_shop_index',[ManagementController::class,'managementShop
 Route::get('/management_shop_request_index',[ManagementController::class,'managementShopRequestIndex'])->name('management_shop_request_index');
 Route::get('/management_shop_create',[ManagementController::class,'managementShopCreate'])->name('management_shop_create');
 Route::get('/management_shop_update',[ManagementController::class,'managementShopUpdate'])->name('management_shop_update');
+Route::get('/management_user_create',[ManagementController::class,'managementUserCreate'])->name('management_user_create');
 
 Route::get('/myPage',[MyPageController::class,'myPage'])->name('myPage');
 Route::get('/profile',[MyPageController::class,'profile'])->name('profile');
@@ -47,6 +48,7 @@ Route::get('/shop_basic_update',[ShopManagementController::class,'shopBasicUpdat
 Route::get('/shop_important_update',[ShopManagementController::class,'shopImportantUpdate'])->name('shop_important_update');
 Route::get('/shop_important_request',[ShopManagementController::class,'shopImportantRequest'])->name('shop_important_request');
 Route::get('/reserve_calender',[ShopManagementController::class,'reserveCalender'])->name('reserve_calender');
+Route::get('/reserve_today',[ShopManagementController::class,'reserveToday'])->name('reserve_today');
 Route::get('/reserve_detail',[ShopManagementController::class,'reserveDetail'])->name('reserve_detail');
 Route::get('/official_photo',[ShopManagementController::class,'officialPhoto'])->name('official_photo');
 

@@ -14,6 +14,7 @@
     <script src="https://cdn.rawgit.com/osamutake/japanese-holidays-js/v1.0.10/lib/japanese-holidays.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1/i18n/jquery.ui.datepicker-ja.min.js"></script>
     @yield('css')
+    @yield('js')
 
 
 </head>

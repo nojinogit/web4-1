@@ -14,6 +14,10 @@ class ManagementController extends Controller
     return view('/management/shop_index');
     }
 
+    public function managementUserCreate(Request $request){
+    return view('/management/user_create');
+    }
+
     public function managementShopCreate(Request $request){
     return view('/management/shop_create');
     }

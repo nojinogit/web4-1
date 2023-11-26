@@ -4,6 +4,10 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/shop_management/reserve_calendar.css')}}">
+<link rel="stylesheet" href="{{ asset('css/layouts/sidebar_layouts.css')}}">
+@endsection
+@section('js')
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.9/index.global.min.js'></script>
 @endsection
 
 @section('content_store_management')
@@ -11,60 +15,52 @@
     <div class="title-area">
         <h3>予約カレンダー</h3>
     </div>
-    <div class="date-area">
-        2023年9月11日
+    <div class="full-calendar">
+        <div id='calendar'></div>
     </div>
-    <table>
-    <tr>
-        <th>id</th>
-        <th>来店日</th>
-        <th>来店時刻</th>
-        <th>来店者名</th>
-        <th>来店人数</th>
-        <th>詳細</th>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2023-09-11</td>
-        <td>11:00</td>
-        <td>山田太郎</td>
-        <td>4人</td>
-        <td><a href="{{route('reserve_detail')}}">詳細</a></td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2023-09-11</td>
-        <td>11:00</td>
-        <td>山田太郎</td>
-        <td>4人</td>
-        <td>詳細</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2023-09-11</td>
-        <td>11:00</td>
-        <td>山田太郎</td>
-        <td>4人</td>
-        <td>詳細</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2023-09-11</td>
-        <td>11:00</td>
-        <td>山田太郎</td>
-        <td>4人</td>
-        <td>詳細</td>
-    </tr>
-    <tr>
-        <td>1</td>
-        <td>2023-09-11</td>
-        <td>11:00</td>
-        <td>山田太郎</td>
-        <td>4人</td>
-        <td>詳細</td>
-    </tr>
-    </table>
 </div>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        locale: 'ja',
+        buttonText: {
+            prev:     '<',
+            next:     '>',
+            prevYear: '<<',
+            nextYear: '>>',
+            today:    '今日',
+            month:    '月',
+            week:     '週',
+            day:      '日',
+            list:     '一覧'
+        },
+        events: [
+                    {
+                        id: '1',
+                        title: 'event1',
+                        start: '2023-11-01',
+                        url: '#'
+                    },
+                    {
+                        id: '2',
+                        title: 'event2',
+                        start: '2023-11-05',
+                        url: '#'
+                    },
+                    {
+                        id: '3',
+                        title: 'event3',
+                        start: '2023-11-07',
+                        end: '2023-11-11',
+                        url: '#'
+                    }
+                ],
+        });
+        calendar.render();
+    });
+</script>
 
 @endsection

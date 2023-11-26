@@ -26,6 +26,10 @@ class ShopManagementController extends Controller
     return view('/shop_management/reserve_calendar');
     }
 
+    public function reserveToday(Request $request){
+    return view('/shop_management/reserve_today');
+    }
+
     public function reserveDetail(Request $request){
     return view('/shop_management/reserve_detail');
     }
