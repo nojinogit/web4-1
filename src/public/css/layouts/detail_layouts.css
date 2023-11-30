@@ -87,7 +87,6 @@
 }
 
 #top{
-    background-color: gray;
     border-right: 1px solid gray;
 }
 
@@ -157,7 +156,7 @@
     align-items: center;
     gap: 10px;
     white-space: nowrap;
-    margin-bottom: 5px;
+    margin-top: 20px;
 }
 
 .number::after {

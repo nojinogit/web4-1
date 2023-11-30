@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('genres', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('shop_id')->constrained('shops')->cascadeOnDelete();
+            $table->string('genre');
             $table->timestamps();
         });
     }

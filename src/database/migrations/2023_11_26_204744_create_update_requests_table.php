@@ -13,6 +13,20 @@ return new class extends Migration
     {
         Schema::create('update_requests', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('shop_id')->constrained('shops')->cascadeOnDelete();
+            $table->string('name');
+            $table->string('telephone_number');
+            $table->char('postcode',8);
+            $table->string('address');
+            $table->time('start');
+            $table->time('end');
+            $table->integer('max_group');
+            $table->smallInteger('minimum_budget_for_lunch');
+            $table->smallInteger('maximum_budget_for_lunch');
+            $table->smallInteger('minimum_budget_for_dinner');
+            $table->smallInteger('maximum_budget_for_dinner');
+            $table->integer('approval');
             $table->timestamps();
         });
     }

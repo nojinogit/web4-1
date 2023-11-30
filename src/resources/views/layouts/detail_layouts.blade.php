@@ -67,47 +67,60 @@
             <p class="reserve-title-p">ネット予約</p>
         </div>
         <div id="datepicker"/></div>
-        <form action="" class="reserve-input-area">
-            <p>日付: <input type="text" id="date_val"/></p>
-            <div class="input-row number"><label class="bold">人数</label><input type="number"  min="1" max="5"></div>
-            <div class="input-row"><label class="bold">時間</label><input type="time"></div>
+        <form action="{{route('reserve')}}" class="reserve-input-area" method="post">
+            @csrf
+            <input type="hidden" id="date_val" name="date"/>
+            <input type="hidden" name="user_id" value="{{Auth::user()->id}}">
+            <input type="hidden" name="shop_id" value="1">
+            <div class="input-row number"><label class="bold">人数</label><input type="number" min="1" max="5" name="number_of_people"></div>
+            <div class="input-row"><label class="bold">時間</label><input type="time" class="time" name="time"></div>
             <button type="submit" class="reserve-button">予約する</button>
         </form>
+        @if (session('message'))
+            <div class="alert alert-success" style="color:blue">
+                {{ session('message') }}
+            </div>
+        @endif
     </div>
 </div>
 
 
 <script>
-$(function(){
-    $("#datepicker").datepicker({
-        minDate: new Date(),
-        beforeShowDay: function(date) {
-        let holiday = JapaneseHolidays.isHoliday(date);
-        let today = new Date();
-        today.setHours(0,0,0,0);
-        if (date <= today) {
-            return [false, "ui-state-disabled hyphen"];
-        } else if (date.getDay() == 0 || date.getDay() == 6 || holiday) {
-            return [false, "ui-state-disabled batu"];
-        } else {
-            return [true, "maru"];
-        }
-        },
-        onSelect: function(dateText, inst) {
-            $("#date_val").val(dateText);
-            setTimeout(addElements, 0);
-        },
-        onChangeMonthYear: ()=>{
-        setTimeout(addElements, 0);
-        },
-    });
+$(function() {
+    let reservations = {};
 
-    function formatDate(dt) {
-        var y = dt.getFullYear();
-        var m = ('0' + (dt.getMonth()+1)).slice(-2);
-        var d = ('0' + dt.getDate()).slice(-2);
-        return (y + '-' + m + '-' + d);
-    };
+    $.get('{{ route('reserveData') }}', { shop_id: 1 }, function(data) {
+        data.reservations.forEach(function(reservation) {
+            reservations[reservation.date] = reservation.reserve_count;
+        });
+
+        $("#datepicker").datepicker({
+            minDate: new Date(),//現在の日付から始める効果もあるので残す
+            defaultDate: "+1d",
+            beforeShowDay: function(date) {
+                let dateString = $.datepicker.formatDate('yy-mm-dd', date);
+                let holiday = JapaneseHolidays.isHoliday(date);
+                let today = new Date();
+                today.setHours(0,0,0,0);
+                if (date <= today) {
+                    return [false, "ui-state-disabled hyphen"];
+                } else if (reservations[dateString] && reservations[dateString] >= 5) {
+                    return [false, "ui-state-disabled batu"];
+                } else if (reservations[dateString] && reservations[dateString] == 4) {
+                    return [true, "triangle"];
+                } else {
+                    return [true, "maru"];
+                }
+            },
+            onSelect: function(dateText, inst) {
+                $("#date_val").val(dateText);
+                setTimeout(addElements, 0);
+            },
+            onChangeMonthYear: ()=>{
+                setTimeout(addElements, 0);
+            },
+        });
+    });
 });
 
 const addElements = ()=>{
@@ -116,6 +129,9 @@ const addElements = ()=>{
     });
     $('.maru').each(function() {
         $(this).find('div').append('<span class="maru"></span>');
+    });
+    $('.triangle').each(function() {
+        $(this).find('div').append('<span class="triangle"></span>');
     });
     $('.batu').each(function() {
         $(this).find('div').append('<span class="batu"></span>');

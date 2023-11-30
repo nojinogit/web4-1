@@ -4,6 +4,7 @@
 
 @section('css')
 <link rel="stylesheet" href="{{ asset('css/detail/comment.css')}}">
+<link rel="stylesheet" href="{{ asset('css/layouts/detail_layouts.css')}}">
 @endsection
 
 @section('content_detail')

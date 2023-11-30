@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('reserves', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->foreignId('shop_id')->constrained('shops')->cascadeOnDelete();
+            $table->string('reserve_number');
+            $table->date('date');
+            $table->time('time');
+            $table->integer('number_of_people');
+            $table->datetime('deleted_at')->nullable();;
             $table->timestamps();
         });
     }

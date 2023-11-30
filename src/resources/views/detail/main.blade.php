@@ -3,8 +3,8 @@
 @section('title','detail_main')
 
 @section('css')
-<link rel="stylesheet" href="{{ asset('css/detail/main.css')}}">
 <link rel="stylesheet" href="{{ asset('css/layouts/detail_layouts.css')}}">
+<link rel="stylesheet" href="{{ asset('css/detail/main.css')}}">
 @endsection
 
 @section('content_detail')

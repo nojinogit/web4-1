@@ -1,3 +1,14 @@
+#top {
+    border-right: 1px solid gray;
+    background-color: gray;
+}
+
+#photo {
+    border-right: 1px solid gray;
+    width: 34%;
+}
+
+#comment {}
 
 .main-left{
     width: 70%;

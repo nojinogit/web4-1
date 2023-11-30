@@ -8,6 +8,7 @@ use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\ShopManagementController;
 use App\Http\Controllers\MyPageController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ReserveController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,6 +30,9 @@ Route::get('/areaSearch/{area}',[SearchController::class,'areaSearch'])->name('a
 Route::get('/detail',[DetailController::class,'detail'])->name('detail');
 Route::get('/detail_photo',[DetailController::class,'detailPhoto'])->name('detail_photo');
 Route::get('/detail_comment',[DetailController::class,'detailComment'])->name('detail_comment');
+
+Route::post('/reserve',[ReserveController::class,'reserve'])->name('reserve');
+Route::get('/reserveData',[ReserveController::class,'reserveData'])->name('reserveData');
 
 Route::get('/management',[ManagementController::class,'management'])->name('management');
 Route::get('/management_shop_index',[ManagementController::class,'managementShopIndex'])->name('management_shop_index');

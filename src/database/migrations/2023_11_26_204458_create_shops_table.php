@@ -13,6 +13,20 @@ return new class extends Migration
     {
         Schema::create('shops', function (Blueprint $table) {
             $table->id();
+            $table->string('name')->index();
+            $table->string('telephone_number');
+            $table->char('postcode',8);
+            $table->string('address')->index();
+            $table->time('start');
+            $table->time('end');
+            $table->integer('max_group');
+            $table->smallInteger('minimum_budget_for_lunch');
+            $table->smallInteger('maximum_budget_for_lunch');
+            $table->smallInteger('minimum_budget_for_dinner');
+            $table->smallInteger('maximum_budget_for_dinner');
+            $table->string('title')->nullable();
+            $table->string('overview')->nullable();
+            $table->string('path')->nullable();
             $table->timestamps();
         });
     }

@@ -8,10 +8,16 @@
     content: "〇";
 }
 
+.triangle div::after {
+    display: flex;
+    justify-content: center;
+    content: "△";
+}
+
 .batu div::after {
     display: flex;
     justify-content: center;
-    content: "×";
+    content: "✕";✕
 }
 
 .hyphen div::after {
