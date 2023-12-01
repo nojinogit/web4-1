@@ -14,5 +14,27 @@
     margin-top: 50px;
 }
 
+.fc-event-title-container {
+    background-color: black;
+    color: white;
+    text-align: center;
+}
 
+.fc-daygrid-event-harness {
+    margin-bottom: 10px;
+}
 
+.fc-h-event{
+    border: 1px solid black;
+    border-radius: 1px;
+}
+
+.white-black .fc-event-title-container{
+    background-color: white;
+    color: black;
+}
+
+.gray-black .fc-event-title-container{
+    background-color: gray;
+    color: black;
+}

@@ -21,46 +21,73 @@
 </div>
 
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
         locale: 'ja',
         buttonText: {
-            prev:     '<',
-            next:     '>',
+            prev: '<',
+            next: '>',
             prevYear: '<<',
             nextYear: '>>',
-            today:    '今日',
-            month:    '月',
-            week:     '週',
-            day:      '日',
-            list:     '一覧'
+            today: '今日',
+            month: '月',
+            week: '週',
+            day: '日',
+            list: '一覧'
         },
-        events: [
-                    {
-                        id: '1',
-                        title: 'event1',
-                        start: '2023-11-01',
-                        url: '#'
-                    },
-                    {
-                        id: '2',
-                        title: 'event2',
-                        start: '2023-11-05',
-                        url: '#'
-                    },
-                    {
-                        id: '3',
-                        title: 'event3',
-                        start: '2023-11-07',
-                        end: '2023-11-11',
-                        url: '#'
+        events: function (fetchInfo, successCallback, failureCallback) {
+            $.get('{{ route('reserveData') }}', { shop_id: 1}, function(data) {
+                var events = [];
+                var reservationMap = {};
+                data.reservations.forEach(function(reservation) {
+                    reservationMap[reservation.date] = reservation.reserve_count;
+                });
+
+                var today = new Date();
+                var oneYearFromToday = new Date();
+                oneYearFromToday.setFullYear(today.getFullYear() + 1);
+                var date = new Date(today);
+
+                while (date < oneYearFromToday) {
+                    var dateString = date.toISOString().split('T')[0];
+
+                    if (reservationMap[dateString] === undefined) {
+                        events.push({
+                            title: '受付中：5組',
+                            start: new Date(date),
+                            allDay: true,
+                            className: 'white-black'
+                        });
+                        events.push({
+                            title: '予約：0組',
+                            start: new Date(date),
+                            allDay: true,
+                            className: 'gray-black'
+                        });
+                    } else {
+                        events.push({
+                            title: '受付中：' + (5 - (reservationMap[dateString] || 0)) + '組',
+                            start: new Date(date),
+                            allDay: true,
+                            className: 'white-black'
+                        });
+                        events.push({
+                            title: '予約：' + reservationMap[dateString] + '組',
+                            start: new Date(date),
+                            allDay: true
+                        });
                     }
-                ],
-        });
-        calendar.render();
+                    date.setDate(date.getDate() + 1);
+                }
+                successCallback(events);
+            });
+        },
     });
+
+    calendar.render();
+});
 </script>
 
 @endsection

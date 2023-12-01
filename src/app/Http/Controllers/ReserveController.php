@@ -10,7 +10,6 @@ use Carbon\Carbon;
 class ReserveController extends Controller
 {
     public function reserve(Request $request){
-    //dd($request->all());//
     $reserve=$request->only(['user_id','shop_id','number_of_people','date','time']);
     $reserve_number = Str::random(10);
     $reserve['reserve_number'] = $reserve_number;
@@ -29,4 +28,5 @@ class ReserveController extends Controller
     ->get();
     return response()->json(['reservations' => $reservations]);
     }
+
 }
